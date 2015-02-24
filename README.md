@@ -1,6 +1,17 @@
-This is a wordpress develoment environment that uses Docker to build a test setup to run code against.
+This is a wordpress develoment environment that uses Docker to build a test setup 
+to run code against.
 
-The root of the project is used as the theme
+I mostly wanted a very simple setup that would use the official mysql and wordpress
+containers and that would use my current directory as theme root.
+
+If you do not change the dev file then the wp-content/themes/wpdev and
+wp-content/plugins/wpdev point to your local environment.
+
+In short, . is mounted as /srv in docker and symlink is setup to point to this
+directory.
+
+Feedback welcome
+
 
 ## Usage
 1. Copy "dev" to your project (theme/plugin dir)
